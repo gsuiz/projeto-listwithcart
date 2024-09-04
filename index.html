@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/breakpoints.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="desserts">
+      <h1>Desserts</h1>
+      <div class="desserts__menu"></div>
+    </div>
+
+    <div class="cart">
+      <h2>Your Cart(0)</h2>
+
+      <div class="cart__empty">
+        <img src="assets/images/illustration-empty-cart.svg" class="cart__img-noadd">
+        <p>Your added items will appear here</p>
+      </div>
+
+      <div class="cart__main">
+        <ul class="cart__list"></ul>
+        <div class="cart__order">
+          <p>Order Total</p>
+          <h2 class="value">$0.00</h2>
+        </div>
+        <div class="carbon-neutral">
+          <img src="assets/images/icon-carbon-neutral.svg" class="neutral__icon">
+          <span>This is a <strong>carbon-neutral</strong> delivery</span>
+        </div>
+        <button class="cart__btn-confirm">Confirm order</button>
+      </div>
+      
+      <div class="order-confirm">
+        <div class="order-confirm__check">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h1>Order Confirmed</h1>
+        <p>We hope you enjoy your food!</p>
+        <ul class="order-confirm__list">
+          <li class="order-confirm__total">
+            <p>Order Total</p>
+            <h2 class="value">$0.00</h2>
+          </li>
+        </ul>
+        <button class="order-confirm__start">Start New Order</button>
+      </div>
+    </div>
+    <div class="black-back"></div>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

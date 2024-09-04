@@ -1,0 +1,362 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Red Hat Text";
+  background-color: hsl(13, 31%, 94%);
+  position: relative;
+}
+
+.desserts{
+  padding: 25px 25px 0 25px;
+}
+
+.desserts h1{
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.desserts__menu{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu__items{
+  text-align: center;
+  cursor: pointer;
+}
+
+.items__img{
+  max-width: 100%;
+  width: 430px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: none;
+}
+
+.items__img.embroidery{
+  border: 3px solid orangered;
+}
+
+.items__btn{
+  width:160px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1.5px solid gray;
+  cursor: pointer;
+  font:600 16px "Red Hat Text";
+  display: block;
+  margin: auto;
+  transform: translate(0,-25px);  
+
+  &:hover{
+    color: hsl(12, 65%, 50%);
+    border-color: hsl(12, 65%, 50%);
+  }
+
+  &.added{
+    color: white;
+    padding: 10px;
+    background-color: hsl(12, 65%, 50%);
+    border-color: hsl(12, 65%, 50%);
+
+    & .added-mode{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      & .btn__more-less{
+        font-size: 32px;
+        font-weight:400;
+        width: 25px;
+        height: 25px;
+        border: 3px solid white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .btn__more-less:first-child{
+        padding-bottom: 4px;
+      }
+    }
+
+    & .noadded-mode{
+      display: none;
+    }
+  }
+}
+
+.items__btn .added-mode{
+  display: none;
+}
+
+.items__btn i{
+  color:  hsl(12, 65%, 50%);
+  margin-right: 7px;
+}
+
+.items__name-price{
+  text-align: left;
+}
+
+.items__name-price p:first-of-type{
+  color:gray;
+  font-weight: 500;
+}
+
+.items__name-price p:nth-child(2){
+  font-size: 17px;
+  font-weight: 700;
+  margin: 3px 0 2px 0;
+}
+
+.items__name-price p:last-of-type{
+  color: hsl(12, 65%, 50%);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cart{
+  width: 90%;
+  max-width: 430px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin-top: 40px;
+  background-color: white; 
+
+  &.containing{
+    & .cart__main{
+      display: block;
+    }
+    & .cart__empty{
+      display: none;
+    }
+  }
+}
+
+.cart__main{
+  display: none;
+}
+
+.cart__empty > p{
+  text-align: center;
+  color: rgb(133, 133, 133);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cart__img-noadd{
+  display: block;
+  margin:30px auto 20px auto;
+}
+
+.cart h2{
+  color: hsl(12, 82%, 43%);
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.cart__list{
+  list-style: none;
+}
+
+.list__items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid rgb(220, 220, 220);
+  padding: 25px 0;
+}
+
+.items__description span{
+  color:rgb(163, 163, 163);
+  font-weight: 500;
+}
+
+.items__description p{
+  font-weight: 600;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.items__description span span{
+  font-weight: 600;
+  color:hsl(12, 82%, 43%);
+  margin-right: 17px;
+}
+
+.items__description span span:last-of-type{
+  font-weight: 600;
+  margin-left: 12px;
+  color: rgb(100, 100, 100);
+}
+
+.items__icon-remove{
+  border: 2px solid rgb(163, 163, 163);
+  color: rgb(163, 163, 163);
+  border-radius: 50%;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.items__icon-remove:hover{
+  border-color: rgb(77, 77, 77);
+  color: rgb(77, 77, 77);
+}
+
+.cart__order{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+
+  & p{
+    font-weight: 500;
+  }
+  & h2{
+    color: black;
+  }
+}
+
+.carbon-neutral{
+  margin: 25px;
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap-reverse;
+}
+
+.cart__btn-confirm,.order-confirm__start{
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 50px;
+  margin:20px auto;
+  background-color: hsl(12, 82%, 43%);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-family: "Red Hat Text";
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover{
+    background-color: hsl(12, 79%, 32%);
+  }
+}
+
+.order-confirm{
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  padding-top: 50px;
+  border-top-left-radius:40px;
+  border-top-right-radius: 40px;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+}
+
+.order-confirm__check{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  margin: 0 0 20px 5%;
+  color: hsl(159, 69%, 38%);
+  border: 4px solid hsl(159, 69%, 38%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-confirm > h1{
+  margin: 0 0 0 5%;
+}
+
+.order-confirm > p{
+  color: gray;
+  font-weight: 500;
+  margin: 5px 0 0 5%;
+}
+
+.order-confirm__list{
+  list-style: none;
+  margin: 30px 20px 0 20px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 10px 30px;
+  border-radius: 40px;
+
+  &>.list__items{
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 20px;
+
+    & > span{
+      font-weight: 600;
+      color: black;
+      font-size: 19px;
+    }
+
+    & .items__description{
+      display: flex;
+      gap: 20px;
+
+      & div span span{
+        color: hsl(12, 82%, 43%);
+        margin-left: 0;
+      }
+    }
+  }
+  & .order-confirm__total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+
+.item__img{
+  width: 70px;
+  height: 70px;
+  border-radius: 7px;
+}
+
+.order-confirm__start{
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.black-back{
+  display: none;
+  min-width: 100%;
+  min-height: 300%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+}
